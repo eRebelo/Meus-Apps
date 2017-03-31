@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_background">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="93dp"
+        android:text="@string/nome_da_pelada_text"
+        android:textAlignment="center"
+        android:textColor="@color/background_botao_partiu"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/idNomePelada"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="37dp"
+        android:background="@color/colorAccent"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        tools:ignore="LabelFor"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/idBotaoIniciar"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/idNomePelada"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/shape_button"
+        android:text="@string/botao_iniciar"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp" />
+
+</RelativeLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_background">
+
+    <ListView
+        android:id="@+id/idListView"
+        android:layout_width="320dp"
+        android:layout_height="400dp"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_below="@+id/idBoasVindas"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:background="@color/colorAccent"
+        android:textAlignment="center"
+        android:textColor="@color/background_botao_partiu" />
+
+    <TextView
+        android:id="@+id/idBoasVindas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/idListView"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="28dp"
+        android:textColor="@color/background_botao_partiu"
+        android:textSize="20sp" />
+</RelativeLayout>

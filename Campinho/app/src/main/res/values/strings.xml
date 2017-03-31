@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Campinho</string>
+    <string name="nome_da_pelada_text">Nome da Pelada</string>
+    <string name="botao_iniciar">Iniciar</string>
+</resources>

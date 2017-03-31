@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3f51b5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#99f777</color>
+    <color name="background_campinho_inicio">#72e14a</color>
+    <color name="background_campinho_fim">#153509</color>
+    <color name="background_botao_partiu">#dd147a97</color>
+</resources>
