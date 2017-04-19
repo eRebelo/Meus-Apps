@@ -15,5 +15,5 @@ App que aborda os conceitos:
 - Gradle 3.4.1
 
 ## Versão Plataforma 
-- Ideal: Android 7.1 (N) - API 25
-- Mínima: Android 5.1 (LOLLIPOP_MR1) - API 22
+- Ideal: Android 7.1 (Nougat) - API 25
+- Mínima: Android 5.1 (Lollipop) - API 22
