@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="armazenalogin.rebelo.com.armazenalogin.MainActivity">
+
+    <TextView
+        android:id="@+id/currentDate"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/currentTime"
+        android:layout_alignStart="@+id/currentTime"
+        android:layout_marginBottom="72dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="28sp" />
+
+    <TextView
+        android:id="@+id/currentTime"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="28sp" />
+
+    <Button
+        android:id="@+id/bCheck"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/currentTime"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="54dp"
+        android:text="@string/textButtonCheck" />
+
+    <TextView
+        android:id="@+id/textViewUltimaMarcacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bCheck"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:text="Última Marcação:"
+        android:textSize="18sp" />
+
+    <ImageButton
+        android:id="@+id/bDelete"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/textUltimaMarcacao"
+        android:layout_toLeftOf="@+id/textViewUltimaMarcacao"
+        android:textSize="18sp"
+        android:layout_marginRight="20dp"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
+
+    <TextView
+        android:id="@+id/textUltimaMarcacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewUltimaMarcacao"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textSize="18sp" />
+
+
+</RelativeLayout>

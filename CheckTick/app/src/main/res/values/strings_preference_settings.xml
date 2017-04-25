@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="key_check_time">key_check_time</string>
+    <string name="default_check_time">---</string>
+</resources>

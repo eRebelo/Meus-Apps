@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CheckTick</string>
+    <string name="textButtonCheck">CHECK IN/OUT</string>
+</resources>
