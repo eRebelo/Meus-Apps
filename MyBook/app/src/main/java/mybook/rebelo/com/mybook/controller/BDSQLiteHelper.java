@@ -1,5 +1,9 @@
 package mybook.rebelo.com.mybook.controller;
 
+/**
+ * Created by rebelo on 25/04/2017.
+ */
+
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -10,12 +14,7 @@ import java.util.ArrayList;
 
 import mybook.rebelo.com.mybook.model.Livro;
 
-/**
- * Created by rebelo on 25/04/2017.
- */
-
 public class BDSQLiteHelper extends SQLiteOpenHelper {
-
     private static final int DATABASE_VERSION = 1;
     private static final String DATABASE_NAME = "LivroDB";
     private static final String TABELA_LIVROS = "livros";
@@ -31,11 +30,11 @@ public class BDSQLiteHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String CREATE_TABLE = "CREATE TABLE livros(" +
-                "id     INTEGER  PRIMARY KEY AUTOINCREMENT," +
-                "tituloTEXT," +
-                "autorTEXT," +
-                "anoINTEGER)";
+        String CREATE_TABLE = "CREATE TABLE livros (" +
+                "id INTEGER PRIMARY KEY AUTOINCREMENT," +
+                "titulo TEXT," +
+                "autor TEXT," +
+                "ano INTEGER)";
         db.execSQL(CREATE_TABLE);
     }
 
@@ -59,13 +58,12 @@ public class BDSQLiteHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(TABELA_LIVROS, // a. tabela
                 COLUNAS, // b. colunas
-                ID + " = ?", // c. colunas para comparar
+                " id = ?", // c. colunas para comparar
                 new String[]{String.valueOf(id)}, // d. parâmetros
                 null, // e. group by
                 null, // f. having
                 null, // g. order by
                 null); // h. limit
-
         if (cursor == null) {
             return null;
         } else {
@@ -86,7 +84,7 @@ public class BDSQLiteHelper extends SQLiteOpenHelper {
 
     public ArrayList<Livro> getAllLivros() {
         ArrayList<Livro> listaLivros = new ArrayList<Livro>();
-        String query = "SELECT  * FROM " + TABELA_LIVROS;
+        String query = "SELECT * FROM " + TABELA_LIVROS;
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(query, null);
         if (cursor.moveToFirst()) {
@@ -115,9 +113,9 @@ public class BDSQLiteHelper extends SQLiteOpenHelper {
     public int deleteLivro(Livro livro) {
         SQLiteDatabase db = this.getWritableDatabase();
         int i = db.delete(TABELA_LIVROS, //tabela
-                ID + " = ?",  // colunas para comparar
+                ID + " = ?", // colunas para comparar
                 new String[]{String.valueOf(livro.getId())});
         db.close();
-        return i; // númerode linhas excluídas
+        return i; // número de linhas excluídas
     }
 }
