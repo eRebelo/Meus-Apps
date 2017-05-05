@@ -17,11 +17,14 @@ public class AddLivroActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle(R.string.add_activity_name);
         setContentView(R.layout.activity_add_livro);
+
         bd = new BDSQLiteHelper(this);
-        final EditText nome = (EditText) findViewById(R.id.edtNome);
-        final EditText autor = (EditText) findViewById(R.id.edtAutor);
-        final EditText ano = (EditText) findViewById(R.id.edtAno);
+
+        final EditText nome = (EditText) findViewById(R.id.edtNomeNovo);
+        final EditText autor = (EditText) findViewById(R.id.edtAutorNovo);
+        final EditText ano = (EditText) findViewById(R.id.edtAnoNovo);
 
         Button adicionar = (Button) findViewById(R.id.btnAddLivro);
         adicionar.setOnClickListener(new View.OnClickListener() {
@@ -35,6 +38,10 @@ public class AddLivroActivity extends AppCompatActivity {
                 bd.addLivro(livro);
 
                 Toast.makeText(getBaseContext(), "Livro inserido com sucesso", Toast.LENGTH_SHORT).show();
+
+                nome.setText("");
+                autor.setText("");
+                ano.setText("");
             }
         });
     }
